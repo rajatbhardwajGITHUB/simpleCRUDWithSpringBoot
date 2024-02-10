@@ -51,7 +51,10 @@ public class UserController {
     @PostMapping("/add")
     private ResponseEntity<Users> addUser(@RequestBody Users user) // value of the 'user' should be extracted from the body
     {
-        Users usr = userrepo.save(user);
+
+            Users usr = userrepo.save(user);
+
+
 
         return new ResponseEntity<>(usr,HttpStatus.OK);
 
